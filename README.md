@@ -46,8 +46,8 @@ flutter pub get
 ### 📝 Basic Usage
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/call_example.gif" width="300" height="200">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/email_example.gif" width="300" height="200">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/call_example.gif" width="300" height="600">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/email_example.gif" width="300" height="600">
 </div>
 
 ```dart
@@ -79,7 +79,7 @@ SmartActionsText(
 ### 🤳 Social Media Integration
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/twitter_example.gif" width="300" height="200">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/twitter_example.gif" width="300" height="600">
 </div>
 
 ```dart
@@ -108,8 +108,8 @@ SmartActionsText(
 
 ### 🛠️ Custom Interaction Buttons
 <div align="left">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/share_example.gif" width="300" height="200">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/copy_example.gif" width="300" height="200">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/share_example.gif" width="300" height="600">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/copy_example.gif" width="300" height="600">
 </div>
 <br/>
 
@@ -135,7 +135,7 @@ SmartActionsText(
 
 ### 🔍 Regex Options
 <div align="left">
-  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/url_example.gif" width="300" height="200">
+  <img src="https://raw.githubusercontent.com/DevCodeSpace/smart_actions_text/main/assets/url_example.gif" width="300" height="600">
 </div>
 <br/>
 
