@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_library_name
-
 library smart_actions_text;
 
 export 'src/regex_options.dart';

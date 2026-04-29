@@ -1,5 +1,13 @@
+## 0.0.2
+
+### Changed
+
+- Updated all package dependencies to their latest compatible versions.
+
 ## 0.0.1
+
 ### Added
+
 - Initial release of Smart Actions Text package
 - Pattern detection and styling support for:
   - Email addresses
