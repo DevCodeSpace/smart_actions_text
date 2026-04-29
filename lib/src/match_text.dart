@@ -91,7 +91,8 @@ class MatchText {
   /// - pattern: The pattern used for matching
   ///
   /// Returns a Map with 'display' and 'value' strings
-  final Map<String, String> Function({required String str, required String pattern})? renderText;
+  final Map<String, String> Function(
+      {required String str, required String pattern})? renderText;
 
   /// Function to render a custom widget for matched text
   ///
@@ -100,11 +101,19 @@ class MatchText {
   /// - pattern: The pattern used for matching
   ///
   /// Returns a Widget to be displayed
-  final Widget Function({required String text, required String pattern})? renderWidget;
+  final Widget Function({required String text, required String pattern})?
+      renderWidget;
 
   /// Creates a MatchText instance
   ///
   /// [type] defaults to ParsedType.custom
   /// [pattern] is required if using custom type
-  MatchText({this.type = ParsedType.custom, this.pattern, this.style, this.onTap, this.renderText, this.renderWidget, this.interactions});
+  MatchText(
+      {this.type = ParsedType.custom,
+      this.pattern,
+      this.style,
+      this.onTap,
+      this.renderText,
+      this.renderWidget,
+      this.interactions});
 }

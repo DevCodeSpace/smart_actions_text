@@ -1,8 +1,11 @@
-## 0.0.2
-
-### Changed
+## 0.0.3
 
 - Updated all package dependencies to their latest compatible versions.
+
+## 0.0.2
+
+- Improved README.md file
+- Make some improvements in Code
 
 ## 0.0.1
 

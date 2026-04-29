@@ -32,7 +32,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  smart_actions_text: ^0.0.2
+  smart_actions_text: ^0.0.3
 ```
 
 Then run:

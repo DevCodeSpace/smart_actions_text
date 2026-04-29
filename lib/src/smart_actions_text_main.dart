@@ -127,21 +127,27 @@ class SmartActionsText extends StatelessWidget {
 
   /// Shares the provided text using platform's native share dialog.
   Future<void> _handleShare(String text) async {
-    await share_plus.SharePlus.instance.share(share_plus.ShareParams(text: text));
+    await share_plus.SharePlus.instance
+        .share(share_plus.ShareParams(text: text));
   }
 
   /// Opens a social media profile based on platform and username.
   ///
   /// Attempts to open in native app first, falls back to web browser.
   /// Supports different URL schemes for Android and iOS.
-  Future<void> _openSocialProfile(String username, SocialPlatform platform) async {
+  Future<void> _openSocialProfile(
+      String username, SocialPlatform platform) async {
     String url;
     switch (platform) {
       case SocialPlatform.twitter:
-        url = Platform.isAndroid || Platform.isIOS ? 'twitter://user?screen_name=$username' : 'https://twitter.com/$username';
+        url = Platform.isAndroid || Platform.isIOS
+            ? 'twitter://user?screen_name=$username'
+            : 'https://twitter.com/$username';
         break;
       case SocialPlatform.facebook:
-        url = Platform.isAndroid || Platform.isIOS ? 'fb://facewebmodal/f?href=https://facebook.com/$username' : 'https://facebook.com/$username';
+        url = Platform.isAndroid || Platform.isIOS
+            ? 'fb://facewebmodal/f?href=https://facebook.com/$username'
+            : 'https://facebook.com/$username';
         break;
       case SocialPlatform.instagram:
         url = 'https://instagram.com/$username';
@@ -156,7 +162,8 @@ class SmartActionsText extends StatelessWidget {
     }
 
     try {
-      await launcher.launchUrl(Uri.parse(url), mode: launcher.LaunchMode.externalApplication);
+      await launcher.launchUrl(Uri.parse(url),
+          mode: launcher.LaunchMode.externalApplication);
     } catch (e) {
       e.toString();
     }
@@ -166,7 +173,8 @@ class SmartActionsText extends StatelessWidget {
   ///
   /// Buttons are only shown if their respective interactions are enabled.
   /// Icon sizes are matched to text size for visual consistency.
-  Widget buildInteractionButtons(BuildContext context, String text, TextInteractions interactions) {
+  Widget buildInteractionButtons(
+      BuildContext context, String text, TextInteractions interactions) {
     // Get text size from style, default to 14 if not specified
     double textSize = style?.fontSize ?? 14.0;
     List<Widget> buttons = [];
@@ -197,7 +205,9 @@ class SmartActionsText extends StatelessWidget {
       ));
     }
 
-    if (interactions.enableSocialProfile && interactions.platform != null && interactions.username != null) {
+    if (interactions.enableSocialProfile &&
+        interactions.platform != null &&
+        interactions.username != null) {
       buttons.add(GestureDetector(
         onTap: () {
           _openSocialProfile(
@@ -314,7 +324,9 @@ class SmartActionsText extends StatelessWidget {
               WidgetSpan(
                 alignment: PlaceholderAlignment.middle,
                 child: GestureDetector(
-                  onTap: interactions.enableSocialProfile == true && interactions.platform != null && interactions.username != null
+                  onTap: interactions.enableSocialProfile == true &&
+                          interactions.platform != null &&
+                          interactions.username != null
                       ? () => _openSocialProfile(
                             interactions.username!,
                             interactions.platform!,
@@ -326,7 +338,9 @@ class SmartActionsText extends StatelessWidget {
                       Flexible(
                         child: Text(text, style: mapping.style ?? style),
                       ),
-                      interactions.showsocialIcon ? buildInteractionButtons(context, text, interactions) : SizedBox(),
+                      interactions.showsocialIcon
+                          ? buildInteractionButtons(context, text, interactions)
+                          : SizedBox(),
                     ],
                   ),
                 ),
@@ -364,7 +378,9 @@ class SmartActionsText extends StatelessWidget {
               WidgetSpan(
                 alignment: PlaceholderAlignment.middle,
                 child: GestureDetector(
-                  onTap: interactions.enableSocialProfile == true && interactions.platform != null && interactions.username != null
+                  onTap: interactions.enableSocialProfile == true &&
+                          interactions.platform != null &&
+                          interactions.username != null
                       ? () => _openSocialProfile(
                             interactions.username!,
                             interactions.platform!,
@@ -374,13 +390,19 @@ class SmartActionsText extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       if (interactions.showsocialIconATStart) ...[
-                        interactions.showsocialIcon ? buildInteractionButtons(context, matchText, interactions) : SizedBox(),
+                        interactions.showsocialIcon
+                            ? buildInteractionButtons(
+                                context, matchText, interactions)
+                            : SizedBox(),
                       ],
                       Flexible(
                         child: Text(matchText, style: mapping.style ?? style),
                       ),
                       if (!interactions.showsocialIconATStart) ...[
-                        interactions.showsocialIcon ? buildInteractionButtons(context, matchText, interactions) : SizedBox(),
+                        interactions.showsocialIcon
+                            ? buildInteractionButtons(
+                                context, matchText, interactions)
+                            : SizedBox(),
                       ],
                     ],
                   ),
@@ -392,7 +414,8 @@ class SmartActionsText extends StatelessWidget {
               TextSpan(
                 text: matchText,
                 style: mapping.style ?? style,
-                recognizer: TapGestureRecognizer()..onTap = () => mapping.onTap!(matchText),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () => mapping.onTap!(matchText),
               ),
             );
           }

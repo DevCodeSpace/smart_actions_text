@@ -1,6 +1,6 @@
 name: smart_actions_text
 description: "A Flutter package that transforms plain text into interactive elements with automatic detection of URLs, emails, phone numbers, and social handles. Features tap interactions, copy/share capabilities, and social media profile access with customizable styling."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/DevCodeSpace/smart_actions_text
 issue_tracker: https://github.com/DevCodeSpace/smart_actions_text/issues
 documentation: https://pub.dev/documentation/smart_actions_text/latest/
